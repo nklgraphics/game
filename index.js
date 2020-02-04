@@ -2,17 +2,22 @@ const readlineSync = require('readline-sync');
 
 console.log("Hello Welcome! Let's play a game.." );
 console.log( "How well do you know Wyncode?" );
+let score = 0 ;
 //console.readKey();
 
 //first question
 answer = readlineSync.question('True or False: UX/UI starts at 9:30PM. ', {
-    trueValue: ['true', 'T'],
-    falseValue: ['false', 'F']
+    trueValue: ['True, true', 'T'],
+    falseValue: ['False, false', 'F']
   });
   if (answer === true) {
     console.log('Not quiet..');
+    score--
+    console.log(score)
   } else if (answer === false) {
-    console.log('Correct!');
+    console.log('Correct!') 
+    score++
+    console.log(score);
   } 
 
 //second question
@@ -21,9 +26,13 @@ answer = readlineSync.question('True or False: UX/UI starts at 9:30PM. ', {
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } else if (answer === false) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } 
 
   //third question
@@ -32,9 +41,13 @@ answer = readlineSync.question('True or False: UX/UI starts at 9:30PM. ', {
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } else if (answer === false) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } 
 
   //fourth question
@@ -43,9 +56,13 @@ answer = readlineSync.question('True or False: UX/UI starts at 9:30PM. ', {
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } else if (answer === false) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } 
 
   //fifth question 
@@ -54,9 +71,13 @@ answer = readlineSync.question('True or False: UX/UI starts at 9:30PM. ', {
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } else if (answer === false) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } 
 
 //sixth question
@@ -65,9 +86,13 @@ answer = readlineSync.question('True or False: Slack is the best way to communic
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } else if (answer === false) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } 
 
 //seventh question
@@ -76,9 +101,13 @@ answer = readlineSync.question('True or False: Your keycards give you 24/7 acces
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } else if (answer === false) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } 
   
   //eight question 
@@ -87,9 +116,13 @@ answer = readlineSync.question('True or False: Your keycards give you 24/7 acces
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } else if (answer === false) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } 
 
   //ninth question
@@ -98,9 +131,13 @@ answer = readlineSync.question('True or False: Your keycards give you 24/7 acces
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } else if (answer === false) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } 
 
   //tenth question
@@ -109,9 +146,13 @@ answer = readlineSync.question('True or False: Your keycards give you 24/7 acces
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } else if (answer === false) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } 
 
   //eleventh question
@@ -120,9 +161,13 @@ answer = readlineSync.question('True or False: Your keycards give you 24/7 acces
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } else if (answer === false) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } 
 
   //twelfth question
@@ -131,7 +176,18 @@ answer = readlineSync.question('True or False: Your keycards give you 24/7 acces
     falseValue: ['false', 'F']
   });
   if (answer === true) {
-    console.log('Correct!');
+    console.log('Correct!')
+    score++
+    console.log(score);
   } else if (answer === false) {
-    console.log('Not quiet..');
+    console.log('Not quiet..')
+    score--
+    console.log(score);
   } 
+
+  if (score>7) {
+    console.log("Great job, you won!!")
+  }
+  else {
+    console.log("Lets try again :(")
+  }
